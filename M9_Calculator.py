@@ -8,8 +8,9 @@ def M9_Calculator(M9):
   Glucose = M9 * 0.02
   CaCl2  = M9 * 0.0001
   Casamino_Acid = M9 * 0.01
+  Agar = M9 * 0.015
   
-  table = PrettyTable(['Index', 'Component', 'Volume'])
+  table = PrettyTable(['Index', 'Component', 'Amount'])
   table.add_row(['1', '1x M9 Salt', '{} mL'.format(M9)])
   
   if MgSO4 < 1:
@@ -31,6 +32,11 @@ def M9_Calculator(M9):
     table.add_row(['5', 'Casamino Acid', '{} μL'.format(1000 * Casamino_Acid)])
   else:
     table.add_row(['5', 'Casamino Acid', '{} mL'.format(Casamino_Acid)])
+  
+  if Agar < 1:
+    table.add_row(['6', '(Agar)', '({} mg)'.format(1000 * Agar)])
+  else:
+    table.add_row(['6', '(Agar)', '({} g)'.format(Agar)])
  
   print(table)
  
