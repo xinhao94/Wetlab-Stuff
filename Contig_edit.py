@@ -1,3 +1,6 @@
+# This script filters the raw contig file based on 
+# a certain threshold of the coverage
+
 f = open('raw.txt')
 p = open('process.txt', 'w')
 
