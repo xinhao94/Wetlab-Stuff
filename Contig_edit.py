@@ -1,8 +1,11 @@
 # This script filters the raw contig file based on 
 # a certain threshold of the coverage
 
-f = open('raw.txt')
-p = open('process.txt', 'w')
+input_file = 'raw.txt'
+output_file = 'process.txt'
+
+f = open(input_file)
+p = open(output_file, 'w')
 
 thres = 10
 line = f.readline()
