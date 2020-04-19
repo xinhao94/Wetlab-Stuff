@@ -16,3 +16,5 @@ hold on
 plot(t, y(:,1), '-r');
 plot(t, y(:,2), '-g');
 legend('Predator', 'Prey', 'Location', 'NE');
+xlabel('Time');
+ylabel('Population size');
