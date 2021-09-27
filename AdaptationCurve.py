@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 day = np.arange(0,8)
 conc = [0,0.03,0.0625,0.09,0.18,0.38,1,4]
 MIC = []
-for i in range(8):
+for i in range(len(conc)):
   MIC.append(0.0625)
 
 plt.step(day, conc, '-', color='black')
