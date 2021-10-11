@@ -17,8 +17,11 @@ for i in range(len(pop1)):
 for i in range(len(pop1)):
   CLSI.append(2)
 
-for pop in pops:
-  plt.step(day, pop, '-', alpha=1)
+plt.step(day, pop1, '-', color='firebrick')
+plt.step(day, pop2, '-', color='greenyellow')
+plt.step(day, pop3, '-', color='mediumpurple')
+plt.step(day, pop4, '-', color='aqua')
+plt.step(day, pop5, '-', color='darkorange')
 
 plt.title("E. coli MB1860 to Ertapenem", fontdict={'fontsize':15})
 plt.xticks(fontsize=15)
