@@ -1,0 +1,90 @@
+<html>
+    <head>
+        <script src="angularplasmid.complete.min.js"></script>
+    </head>
+    <body>
+        <style>
+            @import url("http://fonts.googleapis.com/css?family=Lato:300,400,700|Donegal+One|Source+Code+Pro:400");
+            body {font-family: 'Lato';font-weight:400;}
+            .boundary {stroke-dasharray:2,2;stroke-width:2px}
+            .mdlabel {font-size:10px}
+            .smlabel {font-size:8px}
+            .white {fill:#fff}
+            .red {fill:rgb(192,64,64)}
+            .purple {fill:rgb(192,64,192)}
+            .blue {fill:rgb(64,192,192)}
+            .green {fill:rgb(64,192,64)}
+            .gold {fill:rgb(192,128,64)}
+            .black {fill: rgb(0, 0, 0);}
+        </style>
+        <plasmid sequencelength="5640" plasmidheight="375" plasmidwidth="375">
+            <plasmidtrack trackstyle="fill:#ccc" width="5" radius="120"></plasmidtrack>
+            <plasmidtrack trackstyle="fill:rgba(225,225,225,0.5)" radius="110">
+                <tracklabel text="pSC_JBEI16289_MHT" labelstyle='font-size:18px;font-weight:400'></tracklabel>
+                <tracklabel text="5640 bp" labelstyle='font-size:10px' vadjust="20"></tracklabel>
+                
+                <!-- draw the main markers and labels -->
+                <trackmarker start="376" end="1068" markerstyle="fill:rgba(170,0,85,0.9)" arrowendlength="4" arrowstartlength="-4">
+                    <markerlabel type="path" class="mdlabel white" text="MHT CDS"></markerlabel>
+                </trackmarker>
+                <trackmarker start="1297" end="2058" markerstyle="fill:rgba(85,0,170,0.9)" arrowendlength="4" arrowstartlength="-4">
+                    <markerlabel type="path" class="mdlabel white" text="pMB1 Ori"></markerlabel>
+                </trackmarker>
+                <trackmarker start="3282" end="3391" markerstyle="fill:rgba(0,85,170,0.9)" arrowendlength="4" arrowstartlength="-4">
+                    <markerlabel type="path" class="mdlabel black" text="RP4 oriT" valign="inner" vadjust="-8"></markerlabel>
+                </trackmarker>
+                <trackmarker start="3711" end="3809" markerstyle="fill:rgba(85,170,0,0.9)" arrowendlength="4" arrowstartlength="-4">
+                    <markerlabel type="path" class="mdlabel black" text="attP" valign="inner" vadjust="-8"></markerlabel>
+                </trackmarker>
+                <trackmarker start="4972" end="5637" markerstyle="fill:rgba(170,85,0,0.9)" arrowendlength="4" arrowstartlength="-4">
+                    <markerlabel type="path" class="mdlabel white" text="φC31 Integrase"></markerlabel>
+                </trackmarker>
+
+                <!-- draw the marker regions -->
+                <trackmarker start="376" end="1068" markerstyle="fill:rgba(255,221,238,0.6)" wadjust="-5" vadjust="25"></trackmarker>
+                <trackmarker start="1297" end="2058" markerstyle="fill:rgba(238,221,255,0.6)" wadjust="-5" vadjust="25"></trackmarker>
+                <trackmarker start="3282" end="3391" markerstyle="fill:rgba(221,238,255,0.6)" wadjust="-5" vadjust="25"></trackmarker>
+                <trackmarker start="3711" end="3809" markerstyle="fill:rgba(238,255,221,0.6)" wadjust="-5" vadjust="25"></trackmarker>
+                <trackmarker start="4972" end="5637" markerstyle="fill:rgba(255,238,221,0.6)" wadjust="-5" vadjust="25"></trackmarker>
+                
+
+                <!-- draw the region boundaries lines for each marker -->
+                <trackmarker start="376" markerstyle="stroke:rgba(128,64,64,0.8)" class="boundary" wadjust="20">
+                    <markerlabel class="smlabel red" text="376" vadjust="30"></markerlabel>
+                </trackmarker>
+                <trackmarker start="1068" markerstyle="stroke:rgba(128,64,64,0.8)" class="boundary" wadjust="20">
+                    <markerlabel class="smlabel red" text="1068" vadjust="30"></markerlabel>
+                </trackmarker>
+                <trackmarker start="1297" markerstyle="stroke:rgba(128,64,128,0.8)" class="boundary" wadjust="20">
+                    <markerlabel class="smlabel purple" text="1297" vadjust="30"></markerlabel>
+                </trackmarker>
+                <trackmarker start="2058" markerstyle="stroke:rgba(128,64,128,0.8)" class="boundary" wadjust="20">
+                    <markerlabel class="smlabel purple" text="2058" vadjust="30"></markerlabel>
+                </trackmarker>
+                <trackmarker start="3282" markerstyle="stroke:rgba(64,128,128,0.8)" class="boundary" wadjust="20">
+                    <markerlabel class="smlabel blue" text="3282" vadjust="30"></markerlabel>
+                </trackmarker>
+                <trackmarker start="3391" markerstyle="stroke:rgba(64,128,128,0.8)" class="boundary" wadjust="20">
+                    <markerlabel class="smlabel blue" text="3391" vadjust="35"></markerlabel>
+                </trackmarker>
+                <trackmarker start="3711" markerstyle="stroke:rgba(64,128,64,0.8)" class="boundary" wadjust="20">
+                    <markerlabel class="smlabel green" text="3711" vadjust="30"></markerlabel>
+                </trackmarker>
+                <trackmarker start="3809" markerstyle="stroke:rgba(64,128,64,0.8)" class="boundary" wadjust="20">
+                    <markerlabel class="smlabel green" text="3809" vadjust="30"></markerlabel>
+                </trackmarker>
+                <trackmarker start="4972" markerstyle="stroke:rgba(128,128,64,0.8)" class="boundary" wadjust="20">
+                    <markerlabel class="smlabel gold" text="4972" vadjust="30"></markerlabel>
+                </trackmarker>
+                <trackmarker start="5637" markerstyle="stroke:rgba(128,128,64,0.8)" class="boundary" wadjust="20">
+                    <markerlabel class="smlabel gold" text="5637" vadjust="30"></markerlabel>
+                </trackmarker>
+
+                <!-- draw the scales -->
+                <trackscale interval="100" style='stroke:#999' direction="in" ticksize="3"></trackscale>
+                <trackscale interval="100" style='stroke:#999' ticksize="3"></trackscale>
+                <trackscale interval="1000" style="stroke:#f00" direction="in" showlabels="1" labelstyle="fill:#999;stroke:none;text-anchor:middle;alignment-baseline:middle;font-size:10px"></trackscale>
+            </plasmidtrack>
+        </plasmid>
+    </body>
+<html>
