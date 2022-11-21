@@ -4,11 +4,11 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-df0 = pd.read_csv('MIC_0.5.csv')
-df1 = pd.read_csv('MIC_1.csv')
-df2 = pd.read_csv('MIC_2.csv')
+dfA = pd.read_csv('P1E2-A.csv')
+dfB = pd.read_csv('P1E2-B.csv')
+dfC = pd.read_csv('P1E2-C.csv')
 
-# Reverse the default color scheme to make the figure more intuitive
+# Revers the default color scheme to make the figure more intuitive
 # i.e. higher OD, darker color 
 r_cmap = sns.cm.rocket_r
 
@@ -20,4 +20,7 @@ r_cmap = sns.cm.rocket_r
 
 # plt.show()
 
-sns.heatmap(df1, cmap=r_cmap)
+# sns.heatmap(df1, cmap=r_cmap)
+
+# Fix the upper limit of color map to compare multiple figures
+sns.heatmap(dfC, cmap=r_cmap, vmax=0.5)
